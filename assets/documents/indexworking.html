@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokketo - A New E-commerce Multivendor Platform Launching Soon">
+    <meta name="keywords" content="Pokketo, e-commerce, multivendor platform, handmade crafts, online marketplace">
+    <meta name="robots" content="index, follow">
+    <title>Pokketo - Coming Soon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Include Font Awesome -->
+
+    <style>
+      /* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('assets/img/creditcardshopping.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+/* Logo Styling */
+.logo {
+    width: 150px; /* Default width for desktop */
+    max-width: 80%; /* Prevent overflow on smaller screens */
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    z-index: 10; /* Ensures logo is on top */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+    .logo {
+        width: 100px; /* Adjusted size for mobile */
+    }
+    .overlay {
+        padding: 10px;
+    }
+}
+
+/* Logo Styling */
+.overlay img {
+    width: 150px; /* Default size for desktop */
+    max-width: 80%; /* Limit max width to 80% of viewport */
+    height: auto;
+    margin-bottom: 20px;
+    display: block; /* Ensures visibility */
+    
+}
+
+/* Header and Subheading */
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+h1:hover {
+    color: #ffd700;
+}
+
+.subheading {
+    font-size: 1.8rem;
+    color: #ffc107;
+    margin-top: 10px;
+}
+
+/* Description */
+.about {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px 0;
+    color: #eee;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 70px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    flex: 1 1 80px;
+}
+
+.countdown-box:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 0.8rem;
+}
+
+/* Call to Action */
+.cta {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.download-btn {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+     min-width: 150px; 
+    justify-content: center;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ffd54f;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        font-size: 1rem;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .download-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-box {
+        min-width: 60px;
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        font-size: 0.9rem;
+    }
+
+
+}
+
+/* Loading Icon Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.loading-icon {
+    display: inline-block;
+    animation: bounce 0.6s ease infinite;
+    font-size: 1.5rem;
+}
+
+/* Dot Animation */
+.dots {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.dot {
+    animation: wave 1.5s infinite;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.3s; }
+.dot:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes wave {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <!-- Brand Logo -->
+        <img src="assets/img/logo_back.webp" alt="Pokketo Logo" class="logo">
+
+        <!--  <img src="assets/img/logo_back.webp" alt="Pokketo Logo" style="width: 150px; margin-bottom: 20px;">-->
+
+        <h1>Launching Soon<span class="dots">
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+        </span></h1>
+
+        <div class="subheading">Your One-Stop E-commerce Multivendor Platform</div>
+
+        <!-- About the Platform -->
+        <p class="about">
+            Discover Pokketo, the innovative multivendor e-commerce platform designed to empower shoppers and vendors alike. Enjoy a curated selection of products and exclusive offers, all coming soon!  
+        </p>
+
+        <!-- Countdown Timer -->
+        <!-- <div class="countdown-container" id="countdown">
+            <div class="countdown-box" id="days">00<span>Days</span></div>
+            <div class="countdown-box" id="hours">00<span>Hours</span></div>
+            <div class="countdown-box" id="minutes">00<span>Minutes</span></div>
+            <div class="countdown-box" id="seconds">00<span>Seconds</span></div>
+        </div> -->
+         <!-- Download Section 
+        <div>
+            <a href="assets/documents/pokketo_info.pdf" download class="download-btn">Download Info Document</a>
+        </div>-->
+          
+        <!-- Vendor Information -->
+        <div class="cta">We're Partnering with the Best Vendors to Bring You Unique Products!</div>
+
+        
+
+      
+        <!-- Call to Action Section -->
+<div class="cta d-flex justify-content-between align-items-center" style="width: 100%; max-width: 450px; margin: 20px auto;">
+    <a href="https://www.instagram.com/pokketo_ecom?igsh=MWdmNTVhejgyMWJ5Yw==" class="btn btn-warning btn-lg me-2 download-btn" target="_blank">Join Our Journey!!</a>
+    <a href="assets/documents/pokketo_info.pdf" class="download-btn" id="downloadBtn" onclick="downloadDocument(event)">
+        Download     Doc
+    </a>
+</div>
+    
+
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            Contact us: <a href="mailto:contact@pokketo.com">contact@pokketo.com</a> | +91 xxxxxxxxxx
+        </div>
+
+        <!-- Social Media Links -->
+       <!-- <div class="social-links mt-4">
+            <a href="https://facebook.com"><img src="https://img.icons8.com/ios-glyphs/30/facebook-new.png"/></a>
+            <a href="https://twitter.com"><img src="https://img.icons8.com/ios-glyphs/30/twitter.png"/></a>
+            <a href="https://instagram.com"><img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png"/></a>
+        </div> -->
+    </div>
+
+    <script>
+        // Set launch date to January 1, 2025
+        const launchDate = new Date("January 20, 2025 00:00:00").getTime();
+
+        // Countdown function
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = `${days}<span>Days</span>`;
+            document.getElementById('hours').innerHTML = `${hours}<span>Hours</span>`;
+            document.getElementById('minutes').innerHTML = `${minutes}<span>Minutes</span>`;
+            document.getElementById('seconds').innerHTML = `${seconds}<span>Seconds</span>`;
+
+            // If countdown is finished, display a message
+            if (timeLeft < 0) {
+                clearInterval(timerInterval);
+                document.getElementById('countdown').innerHTML = "We're live now!";
+            }
+        }
+
+        const timerInterval = setInterval(updateCountdown, 1000);
+
+
+        function downloadDocument(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+
+        const downloadBtn = document.getElementById("downloadBtn");
+        
+        // Change button text to loading symbol
+        downloadBtn.innerHTML = '<span class="loading-icon">🚀</span> Launching Download...';
+        
+        // Simulate download action
+        setTimeout(() => {
+            window.location.href = "assets/documents/pokketo_info.pdf"; // Redirect to the download link
+        }, 1000); // Adjust the timeout as needed for user experience
+     }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
